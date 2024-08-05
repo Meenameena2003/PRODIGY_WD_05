@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+  --gradient: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.25em;
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border-radius: 25px;
+  box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+  background-color: #222831;
+  color: #ffffff;
+  height: 380px;
+  width: 860px;
+  display: flex;
+  overflow: hidden;
+}
+
+.weather-side {
+  position: relative;
+  width: 380px;
+  background: #072f5f;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(sunset.avif);
+}
+
+.weather-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: var(--gradient);
+  opacity: 0.4;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 80%;
+  font-size: 1em;
+  text-align: center;
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/svgs/solid/search.svg');
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.current-location-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.current-location-btn:hover {
+  background-color: #45a049;
+}
+
+.date-container {
+  margin-bottom: auto;
+}
+
+.date-dayname {
+  margin: 0;
+}
+
+.date-day {
+  display: block;
+}
+
+.location {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.weather-container {
+  margin-top: auto;
+}
+
+.weather-icon {
+  margin-bottom: 10px;
+}
+
+.weather-temp {
+  margin: 0;
+  font-weight: 700;
+  font-size: 5.5em;
+}
+
+.weather-desc {
+  margin: 0;
+  font-size: 3em;
+}
+
+.info-side {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.today-info {
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.today-info > div {
+  margin-bottom: 10px;
+}
+
+.today-info .title {
+  font-weight: 700;
+}
+
+.week-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.week-list > li {
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  transition: 200ms ease;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+.week-list > li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
